@@ -27,16 +27,15 @@
                 <div class="col-lg-4">
                     <div class="card">
                         <div class="card-body">
-                            <h4>Sistema de Remuneraciones</h4>
-                            <button class="btn btn-success">Testing</button>
-                            <%
-                                Conexion con = new Conexion();
-                                if(con.obtenerConexion()!=null){
-                            %><p>Conexión izi</p><%
-                                }else{
-                                %><p>Conexión falló con éxito</p><%
-                                }
-                            %>
+                            <div class="form-group">
+                                <h4 class="text-center">Búsqueda de personal</h4>
+                            </div>
+                            <div class="form-group offset-2">
+                                <input id="dni" type="text" class="justify-content-center" placeholder="Ingrese DNI">
+                            </div>
+                            <div class="form-group offset-4">
+                                <button class="btn btn-info" onclick="mostrarEmpleado()">Buscar</button>
+                            </div>
                         </div>
                     </div>                    
                 </div>
@@ -44,7 +43,7 @@
                     <div class="card">
                         <div class="card-body ">
                             <h4 class="text-center">Tabla de Personal</h4>
-                            <button class="btn btn-success">Testing</button>
+                            <button class="btn btn-success" onclick="mostrarEmpleado()">Testing</button>
                         </div>                        
                     </div>                    
                 </div>         

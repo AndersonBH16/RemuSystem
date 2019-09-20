@@ -4,8 +4,31 @@
  * and open the template in the editor.
  */
 
-$('button').on('click', function(){
-    alert("testing..!");
+$(document).ready(function(){
+    
 });
+
+
+function mostrarEmpleado(){
+    debugger;
+    var dni = $('#dni').val();
+    
+    var datos = {
+        "dni" : dni
+    };
+    
+    $.ajax({
+        url:"../vistas/consultas.js",
+        method: "POST",
+        data: datos,
+        success:function(respuesta){
+            
+        }
+    });
+}
+
+//$('button').on('click', function(){
+//    alert("testing..!");
+//});
 
 
