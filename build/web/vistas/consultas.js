@@ -5,26 +5,46 @@
  */
 
 $(document).ready(function(){
-    
+    mostrarTrabajadores();
 });
 
 
-function mostrarEmpleado(){
-    debugger;
+function mostrarTrabajadores(){
     var dni = $('#dni').val();
-    
-    var datos = {
-        "dni" : dni
-    };
-    
-    $.ajax({
-        url:"../vistas/consultas.js",
-        method: "POST",
-        data: datos,
-        success:function(respuesta){
-            
-        }
-    });
+    if(dni == ""){
+        var datos = {
+            "dni" : undefined
+        };    
+        $.ajax({
+            url:"controlador",
+            method: "POST",
+            data: datos,
+            success:function(respuesta){
+                for(var i = 0; i < respuesta.length; i++) {
+                    $('#tablaPersonal').html(respuesta);
+                }
+            }
+        });
+    }else{
+        var datos = {
+            "dni" : dni
+        };    
+        $.ajax({
+            url:"controlador",
+            method: "POST",
+            data: datos,
+            success:function(respuesta){
+                for(var i = 0; i < respuesta.length; i++) {
+                    $('#tablaPersonal').html(respuesta);
+                }
+            }
+        });
+    }    
+}
+
+function borrarTexto(){
+    $('#dni').val() = '';
+    mostrarTrabajadores();
 }
 
 //$('button').on('click', function(){

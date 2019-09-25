@@ -18,8 +18,10 @@
         <script src="vistas/com/jquery/jquery-3.4.1.min.js"></script>
         <!--Bootstrap js-->
         <script src="vistas/com/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="vistas/com/icons/js/fontawesome.min.js"></script>
         <!--Bootstrap cs-->
         <link rel="stylesheet" href="vistas/com/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="vistas/com/icons/css/fontawesome.min.css">
     </head>
     <body>
         <div class="container" style="padding: 5%">
@@ -30,20 +32,38 @@
                             <div class="form-group">
                                 <h4 class="text-center">Búsqueda de personal</h4>
                             </div>
-                            <div class="form-group offset-2">
-                                <input id="dni" type="text" class="justify-content-center" placeholder="Ingrese DNI">
+                            <div class="form-group input-group">
+                                <input id="dni" type="text" class="form-control" placeholder="Ingrese DNI"><span onclick="borrarTexto()" class="fa fa-window-close-o"></span>
                             </div>
                             <div class="form-group offset-4">
-                                <button class="btn btn-info" onclick="mostrarEmpleado()">Buscar</button>
+                                <button class="btn btn-info" onclick="mostrarTrabajadores()">Buscar</button>
                             </div>
                         </div>
                     </div>                    
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-8">
                     <div class="card">
-                        <div class="card-body ">
+                        <div class="card-body">
                             <h4 class="text-center">Tabla de Personal</h4>
-                            <button class="btn btn-success" onclick="mostrarEmpleado()">Testing</button>
+                            <table id="" class="table table-responsive table-bordered">
+                                <thead class="thead-dark">
+                                    <tr>
+                                    <th>N°</th>
+                                    <th>DNI</th>
+                                    <th>Nombres</th>
+                                    <th>Apellido Paterno</th>
+                                    <th>Apellido Materno</th>
+                                    <th>Fecha de Nacimiento</th>
+                                    <th>Email</th>
+                                    <th>Dirección</th>
+                                    <th>Código Essalud</th>
+                                    <th>Estado</th>
+                                </tr>
+                                </thead>
+                                <tbody id="tablaPersonal">
+                                    
+                                </tbody>                                
+                            </table>
                         </div>                        
                     </div>                    
                 </div>         
