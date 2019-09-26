@@ -13,16 +13,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import ModeloDAO.TrabajadorDAO;
-import java.util.ArrayList;
-import modelo.Trabajador;
-
 /**
  *
- * @author Anderson Blas
+ * @author Anderson
  */
-@WebServlet(name = "controlador", urlPatterns = {"/controlador"})
-public class controlador extends HttpServlet {
+@WebServlet(name = "NewServlet", urlPatterns = {"/NewServlet"})
+public class NewServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,42 +32,25 @@ public class controlador extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        
         try (PrintWriter out = response.getWriter()) {
-        
-        TrabajadorDAO trabajadorDAO = new TrabajadorDAO();
-        Trabajador trabajador = new Trabajador();
-                
-        String dni = request.getParameter("dni");
-        ArrayList<Trabajador> listaTrabajadores = trabajadorDAO.mostrarTrabajadores(dni);        
-        
-        for(int i=0; i < listaTrabajadores.size();i++){
-            out.print("<tr>");
-            out.print("<td>"+(i+1)+"</td>");            
-            out.print("<td>"+listaTrabajadores.get(i).getDni()+"</td>");
-            out.print("<td>"+listaTrabajadores.get(i).getNombres()+"</td>");                                    
-            out.print("<td>"+listaTrabajadores.get(i).getApellido_paterno()+"</td>");                                
-            out.print("<td>"+listaTrabajadores.get(i).getApellido_materno()+"</td>");
-            out.print("<td>"+listaTrabajadores.get(i).getFecha_nacimiento()+"</td>");
-            out.print("<td>"+listaTrabajadores.get(i).getEmail()+"</td>");
-            out.print("<td>"+listaTrabajadores.get(i).getDireccion()+"</td>");
-            out.print("<td>"+listaTrabajadores.get(i).getCodigo_essalud()+"</td>");
-            out.print("<td>"+listaTrabajadores.get(i).getEstado()+"</td>");
-            //out.print("<td align='center'><a href=\"#\" onclick=\"datosBienMueble("+listaBC.get(i).getIdBienCatalogo()+");\"><span class=\"label label-primary\">Seleccionar</span></a></td>");                        
-            out.print("</tr>");
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet NewServlet</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet NewServlet at " + request.getContextPath() + "</h1>");
+            out.println("</body>");
+            out.println("</html>");
         }
-            
-        //getServletContext().getRequestDispatcher("/vista/consultas.js").forward(request, response);
-        
-        }
-        //request.getRequestDispatcher("../vistas/consultas.js").forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
      *
-     * @param request servlet request   
+     * @param request servlet request
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
@@ -94,9 +73,6 @@ public class controlador extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-        
-        
-        
     }
 
     /**
