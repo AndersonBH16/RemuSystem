@@ -3,11 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Anderson/Documents/Of%20-%20Remuneraciones/RemuSystem/src/java/modelo/Trabajador.java</file>
-            <file>file:/C:/Users/Anderson/Documents/Of%20-%20Remuneraciones/RemuSystem/src/java/ModeloDAO/TrabajadorDAO.java</file>
-            <file>file:/C:/Users/Anderson/Documents/Of%20-%20Remuneraciones/RemuSystem/src/java/Trabajador/controlador.java</file>
-            <file>file:/C:/Users/Anderson/Documents/Of%20-%20Remuneraciones/RemuSystem/web/vistas/consultas.js</file>
-            <file>file:/C:/Users/Anderson/Documents/Of%20-%20Remuneraciones/RemuSystem/web/index.jsp</file>
+            <file>file:/C:/Users/Anderson%20Blas/Documents/NetBeansProjects/Remuconsultas/src/java/config/credenciales.java</file>
+            <file>file:/C:/Users/Anderson%20Blas/Documents/NetBeansProjects/Remuconsultas/src/java/ModeloDAO/TrabajadorDAO.java</file>
+            <file>file:/C:/Users/Anderson%20Blas/Documents/NetBeansProjects/Remuconsultas/web/index.jsp</file>
+            <file>file:/C:/Users/Anderson%20Blas/Documents/NetBeansProjects/Remuconsultas/src/java/librerias/Conexion.java</file>
+            <file>file:/C:/Users/Anderson%20Blas/Documents/NetBeansProjects/Remuconsultas/src/java/modelo/Trabajador.java</file>
+            <file>file:/C:/Users/Anderson%20Blas/Documents/NetBeansProjects/Remuconsultas/src/java/Trabajador/controlador.java</file>
         </group>
     </open-files>
 </project-private>
