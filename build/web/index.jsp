@@ -14,13 +14,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">        
         <title>RemuSystem</title>
-        <!--JQuery-->
-        <script src="vistas/com/jquery/jquery-3.4.1.min.js"></script>
-        <!--Bootstrap js-->
-        <script src="vistas/com/bootstrap/js/bootstrap.bundle.min.js"></script>        
-        <!--Bootstrap cs-->
-        <link rel="stylesheet" href="vistas/com/bootstrap/css/bootstrap.min.css">
+        <!--Bootstrap css-->
+        <link rel="stylesheet" href="vistas/com/bootstrap/css/bootstrap.min.css">        
+        <!--Datatables-->
+        <link rel="stylesheet" href="vistas/com/datatables/DataTables/css/dataTables.bootstrap4.min.css">
+        <!--Íconos Fontawesome-->
         <link rel="stylesheet" href="vistas/com/icons/css/all.css">
+        <!--Estilos internos-->
         <link rel="stylesheet" href="vistas/css/estilos.css">
     </head>
     <body>
@@ -75,8 +75,9 @@
                         <div class="card-body">
                             <div class="form-group">
                                 <h4 class="text-center">Búsqueda de personal</h4>
+                                <br>
                             </div>
-                            <div class="form-group input-group row">
+                            <div class="form-group input-group">
                                 <input id="dni" type="text" class="form-control" placeholder="Ingrese DNI">
                                 <span class="input-group-btn">
                                     <button class="btn btn-dark" onclick="borrarTexto()">
@@ -88,36 +89,47 @@
                                 <button class="btn btn-info" onclick="mostrarTrabajadores()">Buscar</button>
                             </div>
                         </div>
-                    </div>                    
+                    </div>
                 </div>
                 <div class="col-lg-8">
                     <div class="card">
                         <div class="card-body">
                             <h4 class="text-center">Tabla de Personal</h4>
-                            <table id="" class="table table-responsive table-bordered">
-                                <thead class="thead-dark">
-                                    <tr>
-                                    <th>N°</th>
-                                    <th>DNI</th>
-                                    <th>Nombres</th>
-                                    <th>Apellido Paterno</th>
-                                    <th>Apellido Materno</th>
-                                    <th>Fecha de Nacimiento</th>
-                                    <th>Email</th>
-                                    <th>Dirección</th>
-                                    <th>Código Essalud</th>
-                                    <th>Estado</th>
-                                </tr>
-                                </thead>
-                                <tbody id="tablaPersonal">
-                                    
-                                </tbody>                                
-                            </table>
+                            <br>
+                            <div class="table-responsive">                                
+                                <!--<table id="tablaPersonal" class="table table-striped table-bordered compact generic_table" style="width: 100%;">-->
+                                <table id="tablaPersonal" class="table table-bordered generic_table" style="width: 100%;">                                    
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th>N°</th>
+                                            <th>DNI</th>
+                                            <th>Nombres</th>
+                                            <!-- <th>Apellido Paterno</th>
+                                            <th>Apellido Materno</th>
+                                            <th>Fecha de Nacimiento</th>
+                                            <th>Email</th>
+                                            <th>Dirección</th>
+                                            <th>Código Essalud</th>
+                                            <th>Estado</th> -->
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>                            
                         </div>                        
                     </div>                    
                 </div>         
-            </div>    
+            </div>
         </div>
+        <!--JQuery-->
+        <script src="vistas/com/jquery/jquery-3.4.1.min.js"></script>
+        <!--Bootstrap js-->
+        <script src="vistas/com/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="vistas/com/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!--Datatables-->        
+        <script src="vistas/com/datatables/DataTables/js/jquery.dataTables.min.js" type="text/javascript"></script>
+        <script src="vistas/com/datatables/DataTables/js/dataTables.bootstrap4.min.js" type="text/javascript"></script>
+        <!--Mis scripts-->
+        <script src="vistas/js/config_general.js"></script>
         <script src="vistas/js/consultas.js"></script>
     </body>
 </html>

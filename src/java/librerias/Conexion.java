@@ -38,6 +38,7 @@ public class Conexion {
         
     public static void main(String[] args) {
         Conexion con = new Conexion();
-        System.out.println("Conexión izi");
+        String msj = "Hola";
+        System.out.println("{\"data\" : "+msj+"}");
     }
 }
