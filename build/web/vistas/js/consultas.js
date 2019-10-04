@@ -33,14 +33,14 @@ function mostrarTrabajadores(){
         };
     }
     
-    $('#tablaPersonal').DataTable().fnDestroy();
+    //$('#tablaPersonal').DataTable().fnDestroy();
     $('#tablaPersonal').DataTable({
         ajax: {
             method: "POST",
             url: "controlador",
             data: datos,
             dataSrc: "datos"
-        },        
+        },
         columns:  [
             {"data" : "dni"},
             {"data" : "nombres"},
